@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+section {
+  margin: 0;
+}
+.banner {
+  padding: 100px;
+  position: relative;
+  min-height: 100vh;
+  background: url(../images/bgss.jpg);
+
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner h2 {
+  font-size: 3em;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.5em;
+}
+
+.banner h2 span {
+  font-size: 1.5em;
+  color: #00ccff;
+  font-weight: 900;
+}
+
+.banner h3 {
+  font-size: 2em;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.banner a {
+  position: relative;
+  background: #66a3ff;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 30px;
+  font-size: 2em;
+  font-weight: 900;
+  transition: 0.5s ease;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.banner a:hover {
+  background: transparent;
+  border: 1px solid #66a3ff;
+  top: 2px;
+
+  transition: 0.5s ease;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s ease;
+}
+header.sticky {
+  background: #4d94ff;
+  padding: 20px 100px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.5s ease;
+}
+header .logo {
+  color: #fff;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+header ul {
+  list-style: none;
+  position: relative;
+  display: flex;
+}
+
+header ul li {
+  position: relative;
+  list-style: none;
+}
+header ul li a {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+}
+.toggle {
+  display: none;
+}
+
+
+.fed {
+  padding: 30px  100px;
+}
+.fed .heading {
+  color: #111;
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.contentf {
+  height: 650px;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.contentf::-webkit-scrollbar {
+  background: #66a3ff;
+  padding: 10px;
+
+  height: 6px;
+}
+.contentf::-webkit-scrollbar-thumb {
+  background: #df168b;
+}
+.contentf .bx {
+  object-fit: contain;
+  position: relative;
+  border-radius: 10px;
+  min-height: 350px;
+  min-width: 350px;
+  margin: 30px 35px;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  transition: transform 450ms;
+}
+.contentf .bx img {
+  height: 500px;
+  width: 300px;
+}
+
+
+.cont {
+  padding: 30px 100px;
+  background: #4d94ff;
+}
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.foot a {
+  display: flex;
+  background: #4d94ff;
+  height: 60px;
+  width: 60px;
+  margin: 10px 15px;
+  border-radius: 7px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 3px 3px 10px -1px rgba(0, 0, 0, 0.15),
+    -3px -3px 10px -1px rgba(255, 255, 255, 0.15),
+    3px 3px 10px -1px rgba(0, 0, 0, 0.15),
+    -3px -3px 10px -1px rgba(255, 255, 255, 0.15);
+}
+.foot a:hover {
+  box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    inset -6px -6px 10px -1px rgba(255, 255, 255, 0.15),
+    inset 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    inset -6px -6px 10px -1px rgba(255, 255, 255, 0.15);
+}
+
+.foot a i {
+  padding: 20px;
+  font-size: 30px;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  header,
+  header.sticky {
+    padding: 20px;
+    background: #66a3ff;
+  }
+  .menu {
+    position: fixed;
+    top: 75px;
+    left: -100%;
+    display: block;
+    padding: 50px 50px;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    background: #80b3ff;
+    transition: 0.5s;
+    z-index: 999;
+    border-top: 0.5px solid #fff;
+    transition: 0.7s ease-in-out;
+  }
+  .menu.active {
+    left: 0;
+  }
+  header ul li a {
+    color: #fff;
+    font-size: 25px;
+    margin: 10px;
+    font-weight: 500;
+  }
+  .toggle {
+    width: 40px;
+    height: 2px;
+  }
+  .toggle {
+    z-index: 10;
+    right: 30px;
+    top: 0;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  .toggle:before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    z-index: 1;
+    box-shadow: 0 10px 0 #fff;
+    transition: 0.5s;
+  }
+  .toggle:after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    z-index: 1;
+
+    transition: 0.5s;
+  }
+  header.active .toggle:before {
+    top: 14px;
+    transform: rotate(45deg);
+    box-shadow: 0 0 0 #fff;
+  }
+  header.active .toggle:after {
+    bottom: 14px;
+    transform: rotate(-45deg);
+  }
+  .banner {
+    padding: 100px 50px;
+  }
+  .banner h2 {
+    font-size: 1.5em;
+  }
+
+  .banner h2 span {
+    font-size: 1em;
+    color: #00ccff;
+    font-weight: 900;
+  }
+
+  .banner h3 {
+    font-size: 1.3em;
+  }
+
+  .banner a {
+    position: relative;
+    background: #66a3ff;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 20px;
+    font-size: 1.4em;
+    font-weight: 900;
+    transition: 0.5s ease;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+
+  
+.fed {
+  padding: 0;
+}
+.fed .heading {
+  color: #111;
+  font-size: 1.1rem;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.contentf {
+  height: 650px;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.contentf::-webkit-scrollbar-thumb {
+  background: #df168b;
+}
+.contentf .bx {
+  object-fit: contain;
+  position: relative;
+  border-radius: 10px;
+  min-height: 350px;
+  min-width: 350px;
+  margin: 10px;
+  padding: 0;
+  text-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  transition: transform 450ms;
+}
+.contentf .bx img {
+  height: 500px;
+  width: 300px;
+}
+  .cont {
+    padding: 30px;
+  }
+  .foot a {
+    height: 40px;
+    width: 40px;
+    margin: 20px 10px;
+  }
+
+  .foot a i {
+    padding: 10px;
+    font-size: 20px;
+  }
+}
